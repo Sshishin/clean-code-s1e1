@@ -3,7 +3,7 @@ var addButton = document.querySelectorAll(".btn")[0];
 var incompleteTaskHolder = document.getElementById("incomplete-tasks");
 var completedTasksHolder = document.getElementById("completed-tasks");
 
-console.log(incompleteTaskHolder)
+console.log(incompleteTaskHolder);
 
 var createNewTaskElement = function (taskString) {
 
@@ -47,14 +47,17 @@ var createNewTaskElement = function (taskString) {
 var addTask = function () {
   console.log("Add Task...");
 
-  if (!taskInput.value) return;
+  if (!taskInput.value) {
+		return;
+	}
+
   var listItem = createNewTaskElement(taskInput.value);
 
   incompleteTaskHolder.appendChild(listItem);
   bindTaskEvents(listItem, taskCompleted);
 
   taskInput.value = "";
-}
+};
 
 
 var editTask = function () {
@@ -96,8 +99,7 @@ var taskCompleted = function () {
   var listItem = this.parentNode;
   completedTasksHolder.appendChild(listItem);
   bindTaskEvents(listItem, taskIncomplete);
-
-}
+};
 
 
 var taskIncomplete = function () {
@@ -106,7 +108,7 @@ var taskIncomplete = function () {
   var listItem = this.parentNode;
   incompleteTaskHolder.appendChild(listItem);
   bindTaskEvents(listItem, taskCompleted);
-}
+};
 
 
 
