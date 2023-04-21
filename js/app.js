@@ -15,13 +15,13 @@ var createNewTaskElement = function (taskString) {
   var deleteButton = document.createElement("button");
   var deleteButtonImg = document.createElement("img");
 
-	listItem.className = "list-item";
+  listItem.className = "list-item";
 
   label.innerText = taskString;
   label.className = "list-item__task";
 
   checkBox.type = "checkbox";
-	checkBox.className = "none-outline list-item__checkbox";
+  checkBox.className = "none-outline list-item__checkbox";
   editInput.type = "text";
   editInput.className = "list-item__input";
 
@@ -29,8 +29,8 @@ var createNewTaskElement = function (taskString) {
   editButton.className = "edit btn";
 
   deleteButton.className = "delete btn";
-	deleteButtonImg.className = "delete-img";
-  deleteButtonImg.src = "./remove.svg";
+  deleteButtonImg.className = "delete-img";
+  deleteButtonImg.src = "./assets/remove.svg";
   deleteButton.appendChild(deleteButtonImg);
 
 
@@ -48,8 +48,8 @@ var addTask = function () {
   console.log("Add Task...");
 
   if (!taskInput.value) {
-		return;
-	}
+    return;
+  }
 
   var listItem = createNewTaskElement(taskInput.value);
 
@@ -71,7 +71,7 @@ var editTask = function () {
   var editBtn = listItem.querySelector(".edit");
   var containsClass = listItem.classList.contains("edit-mode");
 
-	if (containsClass) {
+  if (containsClass) {
 
     label.innerText = editInput.value;
     editBtn.innerText = "Edit";
@@ -104,7 +104,7 @@ var taskCompleted = function () {
 
 var taskIncomplete = function () {
   console.log("Incomplete Task...");
- 
+
   var listItem = this.parentNode;
   incompleteTaskHolder.appendChild(listItem);
   bindTaskEvents(listItem, taskCompleted);
