@@ -178,9 +178,6 @@ body {
   display: inline-block;
   flex-grow: 1;
 	display: none;
-}
-
-.list-item__input--edit {
 	margin: 0;
   font-size: 18px;
   line-height: 18px;
@@ -191,6 +188,10 @@ body {
   border-radius: 6px;
   font-family: lato, sans-serif;
   color: #888;
+}
+
+.list-item__input--edit {
+	
 	display: inline-block;
 	width: 224px;
 }
@@ -254,6 +255,21 @@ body {
   width: 224px;
 }
 
-.edit-task-label {
+.edit-mode > .list-item__task {
   display: none;
 }
+
+.edit-mode > .list-item__input {
+	display: inline-block;
+}
+
+.list-item__input {
+	display: none;
+}
+
+.list-item__task--edit {
+	display: inline-block;
+}
+
+
+
