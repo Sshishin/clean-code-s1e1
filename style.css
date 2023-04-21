@@ -139,11 +139,6 @@ body {
   color: #888;
 }
 
-.list-item__input--edit {
-	display: inline-block;
-	width: 224px;
-}
-
 .list-item > * {
   vertical-align: middle;
 }
@@ -186,24 +181,19 @@ body {
   color: #888;
 }
 
-.list-text-task {
-  display: none;
-}
-
-.edit-task {
+.edit-task,
+.list-item__input--edit {
   display: inline-block;
   width: 224px;
-}
-
-.edit-mode > .list-item__task {
-  display: none;
 }
 
 .edit-mode > .list-item__input {
 	display: inline-block;
 }
 
-.list-item__input {
+.list-text-task,
+.list-item__input,
+.edit-mode > .list-item__task {
 	display: none;
 }
 
